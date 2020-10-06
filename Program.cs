@@ -10,6 +10,7 @@ namespace UserRegistration
             UsersDetails usersDetails = new UsersDetails();
             usersDetails.FirstNameDetail();
             usersDetails.LastNameDetail();
+            usersDetails.EmailDetail();
 
 
 

@@ -64,5 +64,34 @@ namespace UserRegistration
 
 
         }
+        public void EmailDetail()
+        {
+            while (true)
+            {
+                Console.WriteLine("please enter your email");
+                string email = Console.ReadLine();
+                if (email == " ")
+                {
+                    Console.WriteLine("no  value entered");
+                    Console.WriteLine("please enter some value");
+                }
+                bool check = userValidation.CheckNameValidation(email);
+                if (check == true)
+                {
+                    Console.WriteLine("the email entered is valid");
+                    break;
+
+                }
+                else
+                {
+                    Console.WriteLine("the email entered is not valid");
+                    Console.WriteLine("enter a valid email ! ");
+                }
+
+            }
+
+
+        }
+
     }
 }
