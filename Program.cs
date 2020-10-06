@@ -13,6 +13,8 @@ namespace UserRegistration
             usersDetails.LastNameDetail();
             usersDetails.PhoneDetail();
             usersDetails.EmailDetail();
+            usersDetails.Password();
+
 
 
 
