@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace UserRegistration
 {
@@ -92,6 +93,35 @@ namespace UserRegistration
 
 
         }
+        public void PhoneDetail()
+        {
+            while (true)
+            {
+                Console.WriteLine("please enter your phone number");
+                string phoneNumber = Console.ReadLine();
+                if (phoneNumber == " ")
+                {
+                    Console.WriteLine("no value entered");
+                    Console.WriteLine("please enter some value");
+                }
+                bool check = userValidation.CheckNameValidation(phoneNumber);
+                if (check == true)
+                {
+                    Console.WriteLine("the phone number  entered is valid");
+                    break;
+
+                }
+                else
+                {
+                    Console.WriteLine("the phone number entered is not valid");
+                    Console.WriteLine("enter a valid phone number ! ");
+                }
+
+            }
+
+
+        }
+
 
     }
 }
