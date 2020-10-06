@@ -27,7 +27,7 @@ namespace UserRegistration
         }
         public bool CheckPassword(String password)
         {
-            string pattern = @"^(?=.{8,}$)(?=.*[A-Z])(?=.*[0-9])";
+            string pattern = @"^(?=.{8,}$)(?=.*[A-Z])(?=.*[@#$%^&*])";
             return Regex.IsMatch(password, pattern);
         }
 

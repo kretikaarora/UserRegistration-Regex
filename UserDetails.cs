@@ -142,7 +142,7 @@ namespace UserRegistration
                 else
                 {
                     Console.WriteLine("the password entered is not valid");
-                    Console.WriteLine("enter a valid password ! ");
+                    Console.WriteLine("enter a valid password  ! ");
                 }
 
             }
