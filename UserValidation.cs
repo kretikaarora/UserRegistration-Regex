@@ -14,7 +14,7 @@ namespace UserRegistration
             if (check == true)
                 Console.WriteLine("the name entered is valid");
             else
-                Console.WriteLine("name entered is not valid");
+                Console.WriteLine(" the name entered is not valid");
         }
 
 
