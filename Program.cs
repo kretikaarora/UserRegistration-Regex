@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace UserRegistration
 {
@@ -10,7 +11,9 @@ namespace UserRegistration
             UsersDetails usersDetails = new UsersDetails();
             usersDetails.FirstNameDetail();
             usersDetails.LastNameDetail();
+            usersDetails.PhoneDetail();
             usersDetails.EmailDetail();
+
 
 
 
