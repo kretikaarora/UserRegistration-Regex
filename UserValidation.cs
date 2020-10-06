@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -25,6 +26,11 @@ namespace UserRegistration
         {
             string pattern = @"^[1-9]{2}[ ]{1}[0-9]{10}$";
             return Regex.IsMatch(phoneNo, pattern);
+        }
+        public bool CheckPassword(String password)
+        {
+            string pattern = @"(?=.{8,}$)";
+            return Regex.IsMatch(password, pattern);
         }
 
     }

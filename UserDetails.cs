@@ -121,6 +121,34 @@ namespace UserRegistration
 
 
         }
+        public void Password()
+        {
+            while (true)
+            {
+                Console.WriteLine("please enter your password ");
+                string password = Console.ReadLine();
+                if (password==" ")
+                {
+                    Console.WriteLine("no value entered");
+                    Console.WriteLine("please enter some value");
+                }
+                bool check = userValidation.CheckNameValidation(password);
+                if (check == true)
+                {
+                    Console.WriteLine("the password entered is valid");
+                    break;
+
+                }
+                else
+                {
+                    Console.WriteLine("the password entered is not valid");
+                    Console.WriteLine("enter a valid password ! ");
+                }
+
+            }
+
+
+        }
 
 
     }
