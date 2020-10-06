@@ -19,7 +19,7 @@ namespace UserRegistration
                     Console.WriteLine("no  value entered");
                     Console.WriteLine("please enter some value");
                 }
-                 bool check = userValidation.CheckNameValidation(firstName);
+                bool check = userValidation.CheckNameValidation(firstName);
                 if (check == true)
                 {
                     Console.WriteLine("the name entered is valid");
