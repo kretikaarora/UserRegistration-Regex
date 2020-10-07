@@ -11,13 +11,15 @@ namespace UserRegistration
         public bool CheckNameValidation(string name)
         {
             string pattern = @"^[A-Z]{1}[a-zA-Z]{2,15}$";
+
               return Regex.IsMatch(name, pattern);
+
             
         }
 
         public bool CheckEmailValidation(string email)
         {
-            string pattern = @"^([a-z0-9A-Z])+([._+-]?[a-z0-9A-Z]+)*[@]{1}[a-z0-9A-Z]+[.]{1}[a-z]{3}([.]{1}[a-z]{2})?$";
+            string pattern = @"^([a-z0-9A-Z])+([._+-]?[a-z0-9A-Z]+)*[@]{1}[a-z0-9A-Z]+[.]{1}[a-z]{2,}([.]{1}[a-z]{2,})?$";
             return Regex.IsMatch(email,pattern);
         }
         public bool CheckPhoneNumber(string phoneNo)
@@ -27,7 +29,7 @@ namespace UserRegistration
         }
         public bool CheckPassword(String password)
         {
-            string pattern = @"(?=.{8,}$)";
+            string pattern = @"^(?=.{8,}$)(?=.*[A-Z])(?=.*[@#$%^&*])";
             return Regex.IsMatch(password, pattern);
         }
 
