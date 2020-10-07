@@ -15,11 +15,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your first name");
                 string firstName = Console.ReadLine();
-                if (firstName == " ")
-                {
-                    Console.WriteLine("no  value entered");
-                    Console.WriteLine("please enter some value");
-                }
+
                 bool check = userValidation.CheckNameValidation(firstName);
                 if (check == true)
                 {
@@ -43,11 +39,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your last name");
                 string lastName = Console.ReadLine();
-                if (lastName == " ")
-                {
-                    Console.WriteLine("no  value entered");
-                    Console.WriteLine("please enter some value");
-                }
+               
                 bool check = userValidation.CheckNameValidation(lastName);
                 if (check == true)
                 {
@@ -76,6 +68,8 @@ namespace UserRegistration
                     Console.WriteLine("no  value entered");
                     Console.WriteLine("please enter some value");
                 }
+
+
                 bool check = userValidation.CheckEmailValidation(email);
                 if (check == true)
                 {
@@ -99,11 +93,13 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your phone number");
                 string phoneNumber = Console.ReadLine();
+
                 if (phoneNumber == " ")
                 {
                     Console.WriteLine("no value entered");
                     Console.WriteLine("please enter some value");
                 }
+
                 bool check = userValidation.CheckPhoneNumber(phoneNumber);
                 if (check == true)
                 {
@@ -127,11 +123,13 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your password ");
                 string password = Console.ReadLine();
+
                 if (password==" ")
                 {
                     Console.WriteLine("no value entered");
                     Console.WriteLine("please enter some value");
                 }
+
                 bool check = userValidation.CheckPassword(password);
                 if (check == true)
                 {
@@ -142,7 +140,7 @@ namespace UserRegistration
                 else
                 {
                     Console.WriteLine("the password entered is not valid");
-                    Console.WriteLine("enter a valid password ! ");
+                    Console.WriteLine("enter a valid password  ! ");
                 }
 
             }
