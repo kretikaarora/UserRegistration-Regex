@@ -69,7 +69,11 @@ namespace UserRegistration
                     Console.WriteLine("please enter some value");
                 }
 
+               
+
+
                 bool check = userValidation.CheckEmailValidation(email);
+
                 if (check == true)
                 {
                     Console.WriteLine("the email entered is valid");
