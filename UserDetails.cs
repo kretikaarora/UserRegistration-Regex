@@ -69,6 +69,7 @@ namespace UserRegistration
                     Console.WriteLine("please enter some value");
                 }
 
+
                 bool check = userValidation.CheckEmailValidation(email);
                 if (check == true)
                 {
@@ -92,7 +93,13 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your phone number");
                 string phoneNumber = Console.ReadLine();
-               
+
+                if (phoneNumber == " ")
+                {
+                    Console.WriteLine("no value entered");
+                    Console.WriteLine("please enter some value");
+                }
+
                 bool check = userValidation.CheckPhoneNumber(phoneNumber);
                 if (check == true)
                 {
@@ -116,7 +123,13 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your password ");
                 string password = Console.ReadLine();
-                
+
+                if (password==" ")
+                {
+                    Console.WriteLine("no value entered");
+                    Console.WriteLine("please enter some value");
+                }
+
                 bool check = userValidation.CheckPassword(password);
                 if (check == true)
                 {
