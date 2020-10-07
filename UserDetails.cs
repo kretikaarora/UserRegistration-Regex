@@ -15,11 +15,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your first name");
                 string firstName = Console.ReadLine();
-                if (firstName == " ")
-                {
-                    Console.WriteLine("no  value entered");
-                    Console.WriteLine("please enter some value");
-                }
+
                 bool check = userValidation.CheckNameValidation(firstName);
                 if (check == true)
                 {
@@ -43,11 +39,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your last name");
                 string lastName = Console.ReadLine();
-                if (lastName == " ")
-                {
-                    Console.WriteLine("no  value entered");
-                    Console.WriteLine("please enter some value");
-                }
+               
                 bool check = userValidation.CheckNameValidation(lastName);
                 if (check == true)
                 {
@@ -76,7 +68,12 @@ namespace UserRegistration
                     Console.WriteLine("no  value entered");
                     Console.WriteLine("please enter some value");
                 }
-                bool check = userValidation.CheckPhoneNumber(email);
+
+               
+
+
+                bool check = userValidation.CheckEmailValidation(email);
+
                 if (check == true)
                 {
                     Console.WriteLine("the email entered is valid");
@@ -99,12 +96,8 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your phone number");
                 string phoneNumber = Console.ReadLine();
-                if (phoneNumber == " ")
-                {
-                    Console.WriteLine("no value entered");
-                    Console.WriteLine("please enter some value");
-                }
-                bool check = userValidation.CheckNameValidation(phoneNumber);
+               
+                bool check = userValidation.CheckPhoneNumber(phoneNumber);
                 if (check == true)
                 {
                     Console.WriteLine("the phone number  entered is valid");
@@ -115,6 +108,30 @@ namespace UserRegistration
                 {
                     Console.WriteLine("the phone number entered is not valid");
                     Console.WriteLine("enter a valid phone number ! ");
+                }
+
+            }
+
+
+        }
+        public void Password()
+        {
+            while (true)
+            {
+                Console.WriteLine("please enter your password ");
+                string password = Console.ReadLine();
+                
+                bool check = userValidation.CheckPassword(password);
+                if (check == true)
+                {
+                    Console.WriteLine("the password entered is valid");
+                    break;
+
+                }
+                else
+                {
+                    Console.WriteLine("the password entered is not valid");
+                    Console.WriteLine("enter a valid password  ! ");
                 }
 
             }
