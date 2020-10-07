@@ -17,7 +17,7 @@ namespace UserRegistration
 
         public bool CheckEmailValidation(string email)
         {
-            string pattern = @"^([a-z0-9A-Z])+([._+-]?[a-z0-9A-Z]+)*[@]{1}[a-z0-9A-Z]+[.]{1}[a-z]{3}([.]{1}[a-z]{2})?$";
+            string pattern = @"^([a-z0-9A-Z])+([._+-]?[a-z0-9A-Z]+)*[@]{1}[a-z0-9A-Z]+[.]{1}[a-z]{2,}([.]{1}[a-z]{2,})?$";
             return Regex.IsMatch(email,pattern);
         }
         public bool CheckPhoneNumber(string phoneNo)
