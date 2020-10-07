@@ -63,7 +63,12 @@ namespace UserRegistration
             {
                 Console.WriteLine("please enter your email");
                 string email = Console.ReadLine();
-               
+                if (email == " ")
+                {
+                    Console.WriteLine("no  value entered");
+                    Console.WriteLine("please enter some value");
+                }
+
                 bool check = userValidation.CheckEmailValidation(email);
                 if (check == true)
                 {
