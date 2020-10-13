@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -63,34 +65,43 @@ namespace UserRegistration
         }
         public void EmailDetail()
         {
-            while (true)
-            {
-                Console.WriteLine("please enter your email");
-                string email = Console.ReadLine();
-                if (email == " ")
-                {
-                    Console.WriteLine("no  value entered");
-                    Console.WriteLine("please enter some value");
-                }
 
-                bool check = userValidation.CheckEmailValidation(email);
-                if (check == true)
+            
+                string [] multipleEmailIdList = new string[10];
+                
+                for (int i = 0; i < 11; i++)
                 {
-                    Console.WriteLine("the email id {0} is valid",email);
-                    Console.WriteLine("successful entry");
+                    Console.WriteLine("please enter your email");
+                    string variable = Console.ReadLine();
+                     multipleEmailIdList[i]=variable;
+
+                    bool check = userValidation.CheckEmailValidation(variable);
+                    if (check == true)
+                    {
+                        Console.WriteLine("the email id {0} is valid", variable) ;
+                        Console.WriteLine("successful entry");
+                        
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("unsuccessful entry");
+                        Console.WriteLine("the email id {0} is not valid",variable);
+                        Console.WriteLine(" enter an email id with proper format");
+                    }
+                    Console.WriteLine("Press N if you dont want enter another email address");
+                    Console.WriteLine("Press any other aplphabet if you want to add  another email address");
+                char choice = Convert.ToChar(Console.ReadLine());
+                if (choice == ('N'))
+                {
                     break;
-
                 }
-                else
+                }
+                Console.WriteLine("EmailDetails are -");
+                foreach(string entry in multipleEmailIdList)
                 {
-                    Console.WriteLine("unsuccessful entry");
-                    Console.WriteLine("the email id {0} is not valid",email);
-                    Console.WriteLine(" enter an email id with proper format");
+                  Console.WriteLine(entry);
                 }
-
-            }
-
-
         }
         public void PhoneDetail()
         {
