@@ -65,6 +65,7 @@ namespace UserRegistration
         }
         public void EmailDetail()
         {
+
             
                 string [] multipleEmailIdList = new string[10];
                 
