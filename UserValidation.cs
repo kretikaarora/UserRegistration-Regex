@@ -10,11 +10,13 @@ namespace UserRegistration
     {
         public bool CheckNameValidation(string name)
         {
+
             // Comparing namePattern to input given by user
             // Capital first name and min 3 letters 
             string namePattern = @"^[A-Z]{1}[a-zA-Z]{2,}$";
               return Regex.IsMatch(name, namePattern);
-            
+
+           
         }
 
         public bool CheckEmailValidation(string email)
