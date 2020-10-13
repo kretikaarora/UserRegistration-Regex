@@ -1,13 +1,23 @@
-﻿using System;
-using System.Text.RegularExpressions;
-using System.Transactions;
-using System.Xml;
-
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Program.cs" company="Bridgelabz">
+//   Copyright © 2018 Company
+// </copyright>
+// <creator Name="Kretika Arora"/>
+// --------------------------------------------------------------------------------------------------------------------
 namespace UserRegistration
 {
-    class Program
+    using System;
+
+    /// <summary>
+    /// entry point for Regex program
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Defines the entry point of the application.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
+        public static void Main(string[] args)
         {
             Console.WriteLine(" welcome to User Registration");
             Console.WriteLine("1. Press 1 for validation of  first name");
@@ -18,12 +28,12 @@ namespace UserRegistration
             Console.WriteLine("6. Press 6 to exit");
 
             UsersDetails usersDetails = new UsersDetails();
-            
+
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("Please select the number 1. first name  2. last name 3. phone number 4. email  5. password 6. Exit ");
-                
+
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -48,32 +58,8 @@ namespace UserRegistration
                     default:
                         Console.WriteLine("please enter a valid number");
                         break;
-
-
-
-
-
-
                 }
             }
-
-            
-            
-           
-            
-            
-
-
-
-
-
-
-
-
-
-
-
-
         }
     }
-}
+ }
