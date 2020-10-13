@@ -10,16 +10,18 @@ namespace UserRegistration
     {
         public bool CheckNameValidation(string name)
         {
-            string pattern = @"^[A-Z]{1}[a-zA-Z]{2,15}$";
 
-              return Regex.IsMatch(name, pattern);
+            // Comparing namePattern to input given by user
+            // Capital first name and min 3 letters 
+            string namePattern = @"^[A-Z]{1}[a-zA-Z]{2,}$";
+              return Regex.IsMatch(name, namePattern);
 
-            
+           
         }
 
         public bool CheckEmailValidation(string email)
         {
-            string pattern = @"^([a-z0-9A-Z])+([._+-]?[a-z0-9A-Z]+)*[@]{1}[a-z0-9A-Z]+[.]{1}[a-z]{2,}([.]{1}[a-z]{2,})?$";
+            string pattern = @"^([a-z0-9A-Z])+([._+-]?[a-z0-9A-Z]+)*[@]{1}[a-z0-9A-Z]+[.]{1}[a-zA-Z]{2,}([.]{1}[a-z]{2,})?$";
             return Regex.IsMatch(email,pattern);
         }
         public bool CheckPhoneNumber(string phoneNo)
@@ -29,7 +31,8 @@ namespace UserRegistration
         }
         public bool CheckPassword(String password)
         {
-            string pattern = @"^(?=.{8,}$)(?=.*[A-Z])(?=.*[@#$%^&*])";
+            // string pattern = @"^(?=.{8,}$)(?=.*[A-Z])(?=.*[@#$%^&*])";
+            string pattern = @"^(?=.*[A-Z])(?=.*[0-9])(?=.*[^0-9a-zA-Z])(?!.*[^0-9a-zA-Z].*[^0-9a-zA-Z]).{8,}$";
             return Regex.IsMatch(password, pattern);
         }
 
