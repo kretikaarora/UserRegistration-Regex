@@ -24,9 +24,7 @@ namespace UserRegistration
             {
                 throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.NULL_MESSAGE, "Name should not null");
             }
-
-
-
+         
         }
 
         public bool CheckEmailValidation(string email)
