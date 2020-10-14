@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistration
 {
-    class UserValidation
+    public class UserValidation
     {
         public bool CheckNameValidation(string name)
         {
